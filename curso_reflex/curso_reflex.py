@@ -12,10 +12,13 @@ class State(rx.State):
 
 
 def index() -> rx.Component:
-    return rx.vstack(
+    return rx.center(
+        rx.vstack(
         navbar(),
         header(),
-        links()
+        links(),
+        ),
+        direction = "column"
     )
 
 
