@@ -1,20 +1,17 @@
 import reflex as rx
+import curso_reflex.styles.styles as styles
+from curso_reflex.styles.styles import Size as Size
+
 def navbar()->rx.Component:
     return rx.vstack(
         rx.text(
             "Chinampa",
-            font_family = "arial",
-            height = "40px",
-            direction = "column",
-            width = "100%",
+            color = "black",
         ),
-        bg = "blue",
+        bg = "lightgray",
         position = "sticky",
-        padding_x = "16px" ,
-        padding_y = "8px",
+        padding_x = Size.DEFAULT.value ,
+        padding_y = Size.SMALL.value,
         z_index = "999",
-        border= "1px solid",
-        align="center",
-        spacing="4",
-        width = "100%",
+        top = "0",
     )
