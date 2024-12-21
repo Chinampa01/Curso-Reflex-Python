@@ -26,7 +26,15 @@ def index() -> rx.Component:
     )
 
 app = rx.App(
-    style=styles.BASE_STYLE
+    theme=rx.theme(
+        accent_color="teal",  # Para representar los detalles neón
+        appearance="dark",    # Base oscura como el traje de TD Ekko
+        has_background=True,
+        ),
+    style=styles.BASE_STYLE,
+    stylesheets=[
+        "https://fonts.googleapis.com/css2?family=Rubik+Pixels&display=swap",
+    ],
 )
 app.add_page(index)
 app._compile() 
